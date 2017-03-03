@@ -478,7 +478,7 @@ class VehicleDetector(object):
         # get the heatmap and average it across recent frames
         heatmap = self.get_heatmap(norm, raw_windows)
         avg_heatmap = self.get_average_heatmap(heatmap)
-        return avg_heatmap
+
         # use the heatmap to remove false positives
         heatmap_windows = self.detect_windows_from_heatmap(avg_heatmap, threshold=5)
 

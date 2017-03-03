@@ -19,8 +19,8 @@ if __name__ == "__main__":
     detector = VehicleDetector(clf, params, scaler)
 
     # open the video clip and process each image
-    source = VideoFileClip('challenge_video.mp4')
-    output = 'challenge_video_out.mp4'
+    source = VideoFileClip('project_video.mp4')
+    output = 'project_video_out.mp4'
 
     # detect vehicles for each of the frame and save the output
     clip = source.fl_image(detector.run)
