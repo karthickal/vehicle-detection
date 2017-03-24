@@ -4,6 +4,19 @@
 
 This repository contains code in Python to detect vehicles in a video using computer vision and machine learning techniques. The input video is recorded by a camera placed in front of the car. This repository was submitted as a project for Udacity's Self Driving Car Nanodegree. For more information please visit - [Udacity's Self Driving Car Nanodegree](https://www.udacity.com/course/self-driving-car-engineer-nanodegree--nd013)
 
+## Setup
+### Training
+
+The images used for training can be found [here](https://drive.google.com/open?id=0B9OvSqOMhhqTUG1zeVd1SnhhQlk). The zipped file contains training images for verhicle and non-vehicles. Unzip the file in your local working directory and modify the folder name constants found in train.py on line 29.
+```
+train.py ln:29
+
+# set the file names and data directories
+VEHICLES_DIR = './data/vehicles'
+NON_VEHICLES_DIR = './data/non-vehicles'
+PICKLE_FILE = 'svc.p'
+```
+
 ## Solution Overview
 
 The following is a step by step procedure on how the solution was achieved. A classifier was trained on extracted images from the training data. The pipeline steps were repeated for each frame of the video to create the final video output which can be found [here](project_video_out.mp4)
